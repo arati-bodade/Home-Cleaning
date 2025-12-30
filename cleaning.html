@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Home Cleaning Services</title>
+    <link rel="stylesheet" href="cleaning.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand" onclick="scrollToTop()">
+                <i class="fas fa-broom"></i>
+                <span>CleanHome Pro</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-dropdown">
+                    <a href="#services" class="nav-link">
+                        Services
+                        <i class="fas fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#services" onclick="scrollToService('sofa')">Sofa Cleaning</a></li>
+                        <li><a href="#services" onclick="scrollToService('kitchen')">Kitchen Cleaning</a></li>
+                        <li><a href="#services" onclick="scrollToService('hall')">Hall Cleaning</a></li>
+                        <li><a href="#services" onclick="scrollToService('window')">Window Cleaning</a></li>
+                    </ul>
+                </li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-container">
+                    <button class="search-btn" id="searchBtn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="search-box" id="searchBox">
+                        <input type="text" id="searchInput" placeholder="Search services...">
+                        <button class="search-close" id="searchClose">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+                <button class="btn btn-nav" id="navBookBtn">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Book Now</span>
+                </button>
+                <div class="notification-badge" id="notificationBadge">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge-count">3</span>
+                </div>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Notification Panel -->
+    <div class="notification-panel" id="notificationPanel">
+        <div class="notification-header">
+            <h3>Notifications</h3>
+            <button class="notification-close" id="notificationClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="notification-content">
+            <div class="notification-item">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                    <p><strong>Booking Confirmed</strong></p>
+                    <span>Your cleaning service is scheduled</span>
+                </div>
+            </div>
+            <div class="notification-item">
+                <i class="fas fa-star"></i>
+                <div>
+                    <p><strong>Special Offer</strong></p>
+                    <span>20% off on first booking</span>
+                </div>
+            </div>
+            <div class="notification-item">
+                <i class="fas fa-info-circle"></i>
+                <div>
+                    <p><strong>New Service</strong></p>
+                    <span>Deep cleaning now available</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Professional Home Cleaning Services</h1>
+            <p class="hero-subtitle">We make your home sparkle with expert cleaning solutions</p>
+            <button class="btn btn-primary" id="bookNowBtn">Book Now</button>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Cleaning Services</h2>
+                <p>Choose from our range of professional cleaning services</p>
+            </div>
+
+            <!-- Service Tabs -->
+            <div class="service-tabs">
+                <button class="tab-btn active" data-service="sofa">
+                    <i class="fas fa-couch"></i>
+                    <span>Sofa Cleaning</span>
+                </button>
+                <button class="tab-btn" data-service="kitchen">
+                    <i class="fas fa-utensils"></i>
+                    <span>Kitchen Cleaning</span>
+                </button>
+                <button class="tab-btn" data-service="hall">
+                    <i class="fas fa-home"></i>
+                    <span>Hall Cleaning</span>
+                </button>
+                <button class="tab-btn" data-service="window">
+                    <i class="fas fa-window-maximize"></i>
+                    <span>Window Cleaning</span>
+                </button>
+            </div>
+
+            <!-- Service Content -->
+            <div class="service-content">
+                <!-- Sofa Cleaning -->
+                <div class="service-panel active" id="sofa-panel">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&h=400&fit=crop" alt="Sofa Cleaning Service" class="service-img">
+                            <div class="image-overlay">
+                                <i class="fas fa-couch"></i>
+                            </div>
+                        </div>
+                        <div class="service-details">
+                            <h3>Sofa & Upholstery Cleaning</h3>
+                            <p>Professional deep cleaning for all types of sofas, couches, and upholstered furniture. We use eco-friendly solutions to remove stains, odors, and allergens.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Deep steam cleaning</li>
+                                <li><i class="fas fa-check"></i> Stain removal</li>
+                                <li><i class="fas fa-check"></i> Odor elimination</li>
+                                <li><i class="fas fa-check"></i> All fabric types</li>
+                                <li><i class="fas fa-check"></i> Eco-friendly products</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price">Starting at $49</span>
+                            </div>
+                            <button class="btn btn-secondary" onclick="openBookingModal('Sofa Cleaning')">Book This Service</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kitchen Cleaning -->
+                <div class="service-panel" id="kitchen-panel">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1556910096-6f5e72db6803?w=600&h=400&fit=crop" alt="Kitchen Cleaning Service" class="service-img">
+                            <div class="image-overlay">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                        <div class="service-details">
+                            <h3>Kitchen Deep Cleaning</h3>
+                            <p>Comprehensive kitchen cleaning including appliances, cabinets, countertops, and all surfaces. We ensure your kitchen is spotless and sanitized.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Appliance cleaning</li>
+                                <li><i class="fas fa-check"></i> Cabinet & countertop cleaning</li>
+                                <li><i class="fas fa-check"></i> Oven & stove deep clean</li>
+                                <li><i class="fas fa-check"></i> Refrigerator cleaning</li>
+                                <li><i class="fas fa-check"></i> Sanitization</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price">Starting at $79</span>
+                            </div>
+                            <button class="btn btn-secondary" onclick="openBookingModal('Kitchen Cleaning')">Book This Service</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hall Cleaning -->
+                <div class="service-panel" id="hall-panel">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop" alt="Hall Cleaning Service" class="service-img">
+                            <div class="image-overlay">
+                                <i class="fas fa-home"></i>
+                            </div>
+                        </div>
+                        <div class="service-details">
+                            <h3>Hall & Living Room Cleaning</h3>
+                            <p>Complete cleaning of your hall and living areas including floors, walls, furniture, and decorative items. We pay attention to every detail.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Floor vacuming & mopping</li>
+                                <li><i class="fas fa-check"></i> Furniture dusting</li>
+                                <li><i class="fas fa-check"></i> Wall & baseboard cleaning</li>
+                                <li><i class="fas fa-check"></i> Light fixture cleaning</li>
+                                <li><i class="fas fa-check"></i> Decorative item care</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price">Starting at $69</span>
+                            </div>
+                            <button class="btn btn-secondary" onclick="openBookingModal('Hall Cleaning')">Book This Service</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Window Cleaning -->
+                <div class="service-panel" id="window-panel">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&h=400&fit=crop" alt="Window Cleaning Service" class="service-img">
+                            <div class="image-overlay">
+                                <i class="fas fa-window-maximize"></i>
+                            </div>
+                        </div>
+                        <div class="service-details">
+                            <h3>Window & Glass Cleaning</h3>
+                            <p>Streak-free window cleaning for both interior and exterior windows. We also clean window frames, sills, and screens for a complete service.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Interior & exterior windows</li>
+                                <li><i class="fas fa-check"></i> Streak-free finish</li>
+                                <li><i class="fas fa-check"></i> Frame & sill cleaning</li>
+                                <li><i class="fas fa-check"></i> Screen cleaning</li>
+                                <li><i class="fas fa-check"></i> Glass door cleaning</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price">Starting at $39</span>
+                            </div>
+                            <button class="btn btn-secondary" onclick="openBookingModal('Window Cleaning')">Book This Service</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Us</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Insured & Bonded</h3>
+                    <p>Fully insured for your peace of mind</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Eco-Friendly</h3>
+                    <p>Safe, green cleaning products</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Flexible Scheduling</h3>
+                    <p>Available at your convenience</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Expert Team</h3>
+                    <p>Professional, trained cleaners</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About CleanHome Pro</h2>
+                    <p>With over 10 years of experience, CleanHome Pro has been providing exceptional cleaning services to thousands of satisfied customers. We pride ourselves on attention to detail, reliability, and using only the best eco-friendly products.</p>
+                    <p>Our team of professional cleaners is trained, insured, and committed to making your home shine. We understand that your home is your sanctuary, and we treat it with the care and respect it deserves.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>10+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>5000+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>100%</h3>
+                            <p>Satisfaction Rate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Have questions? We'd love to hear from you</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>7758806410</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@cleanhomepro.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Rohit Cleaning House, neral, mumbai</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="contactName" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="contactEmail" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="contactMessage" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2021 RohitHome cleaning. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <h2>Book a Service</h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label>Service</label>
+                    <input type="text" id="bookingService" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="bookingName" placeholder="Your full name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="bookingEmail" placeholder="your.email@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" id="bookingPhone" placeholder="(555) 123-4567" required>
+                </div>
+                <div class="form-group">
+                    <label>Preferred Date</label>
+                    <input type="date" id="bookingDate" required>
+                </div>
+                <div class="form-group">
+                    <label>Preferred Time</label>
+                    <select id="bookingTime" required>
+                        <option value="">Select time</option>
+                        <option value="09:00">9:00 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="13:00">1:00 PM</option>
+                        <option value="14:00">2:00 PM</option>
+                        <option value="15:00">3:00 PM</option>
+                        <option value="16:00">4:00 PM</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Additional Notes</label>
+                    <textarea id="bookingNotes" rows="3" placeholder="Any special instructions or requirements..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="cleaning.js"></script>
+</body>
+</html>
+
